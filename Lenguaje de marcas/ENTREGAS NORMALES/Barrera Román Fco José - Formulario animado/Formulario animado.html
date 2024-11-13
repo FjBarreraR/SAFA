@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="styleform.css">
+
+</head>
+<body>
+    <div class="caja">
+        <form action="prueba.php " method="post">
+            <h3>Mi hotel - Reserve Online</h3>
+             <p>
+                <label for="name">Nombre:</label>
+                <input type="text" name="nombre" size="30">
+            </p>
+
+            <p>
+                <label for="surname">Apellidos:</label>
+                <input type="text" name="apellidos" size="30">
+            </p>
+
+            <p>
+                <label for="phone">Teléfono:</label>
+                <input type="number" name="Teléfono" size="30">
+            </p>
+
+            <p>
+                <label for="Email">Email:</label>
+                <input type="email" name="email" size="30">
+            </p>
+
+            <p>
+                <label for="cars">Nº Coches:</label>
+                <input type="number" name="numero de coches" size="10">
+            </p>
+
+            <p>
+                <label for="fecha entrada">Fecha de entrada</label>
+                <input type="date" name="fecha de entrada" size="10">
+            </p>
+
+            <h4>Tipo de habitación</h4>
+
+            <p>
+                <input type="radio" name="sdm" value="s">
+                <label for="tipo de habitacion">Simple</label>
+
+                <input type="radio" name="sdm" value="m">
+                <label for="tipo de habitacion">Doble</label>
+
+                <input type="radio" name="sdm" value="m">
+                <label for="tipo de habitacion">Matrimonio</label>
+            </p>
+
+            <h4>Extras</h4>
+
+            <p>
+                <input type="checkbox" name="dccc" value="d">
+                <label for="Extras">Desayuno</label>
+
+                <input type="checkbox" name="dccc" value="c">
+                <label for="Extras">Comida</label>
+
+                <input type="checkbox" name="dccc" value="c">
+                <label for="Extras">Cena</label>
+
+                <input type="checkbox" name="dccc" value="cs">
+                <label for="Extras">Cama supletoria</label>
+            </p>
+            <div class="comentario">
+            <p>Comentarios</p>
+                <textarea class="comentario_redondo" rows="5" cols="50"></textarea>
+            </div>
+            <div class="botones">
+                <p>
+                    <div class="boton1">
+                        <input type="submit" value="Enviar">
+                    </div>
+                    <div class="boton2">
+                        <input type="reset" value="Borrar">
+                    </div>
+                </p>
+            </div>
+    </form>
+    </div>
+</body>
+</html>

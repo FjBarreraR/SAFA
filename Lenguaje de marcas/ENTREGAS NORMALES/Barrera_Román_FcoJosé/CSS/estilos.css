@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.padre {
+    display: flex;
+    gap: 4rem;
+    border: none;
+    border-bottom: 3px solid yellow;
+    width: 88%;
+}
+
+.hijo {
+    margin-top: 30px;
+}
+
+.fondo {
+    background-color: rgb(212, 206, 206);
+    padding-left: 25px;
+    padding-right: 25px;;
+}
+
+.tabla {
+    display: flex;
+    gap: 0.3rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.gris {
+    background-color: rgb(175, 164, 164);
+    color: rgb(13, 92, 196);
+    width: 8rem;
+    height: 2.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.azul {
+    background-color: rgb(13, 92, 196);
+    color: white;
+    width: 8rem;
+    height: 2.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.ordenar {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-left: 65rem;
+}
+
+.ordenar_por {
+    color: rgb(13, 92, 196);
+}
+
+.top_peliculas {
+    color: rgb(13, 92, 196);
+    background-color: white;
+    text-align: center;
+    width: 9rem;
+    height: 3rem;
+}
+
+.a_z {
+    color: white;
+    background-color: rgb(13, 92, 196);
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+}
