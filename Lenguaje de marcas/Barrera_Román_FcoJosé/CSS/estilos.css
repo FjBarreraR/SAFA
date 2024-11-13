@@ -7,10 +7,12 @@ body {
 
 .padre {
     display: flex;
+    flex-wrap: wrap;
     gap: 4rem;
     border: none;
     border-bottom: 3px solid yellow;
     width: 88%;
+    
 }
 
 .hijo {
@@ -19,8 +21,11 @@ body {
 
 .fondo {
     background-color: rgb(212, 206, 206);
-    padding-left: 25px;
-    padding-right: 25px;;
+    width: 87rem;
+    height: 36rem;
+    text-align: center;
+    flex-wrap: wrap;
+    
 }
 
 .tabla {
@@ -28,6 +33,8 @@ body {
     gap: 0.3rem;
     text-align: center;
     margin-top: 10px;
+    margin-left: 1.4rem;
+    flex-wrap: wrap;
 }
 
 .gris {
@@ -51,6 +58,7 @@ body {
     gap: 1rem;
     margin-top: 2rem;
     margin-left: 65rem;
+    flex-wrap: wrap;
 }
 
 .ordenar_por {
@@ -71,4 +79,34 @@ body {
     text-align: center;
     width: 3rem;
     height: 3rem;
+}
+
+.peliculas {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    flex-wrap: wrap;
+}
+
+.titulo {
+    color: rgb(13, 92, 196);
+}
+
+.contorno_pelicula {
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    width:16rem ;
+    height:25rem ;
+}
+
+.valoracion {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.votos {
+    color: grey;
+    
 }
