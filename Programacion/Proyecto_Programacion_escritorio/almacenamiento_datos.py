@@ -129,3 +129,23 @@ def eleminar(id):
     # Cerramos la conexión
     conexion.close()
 
+# Función para volcar los datos a nuestra base de datos
+def insertar_datos(ropa):
+
+    # Llamamos a la lista que creamos en el archivo anterior
+    lista_ropa = ws.web_scraping()
+
+    # Creamos una variable que sea la función que creamos antes para conectar con la base de datos
+    conexion = conectar_bbdd()
+
+    # Ejecutamos la conexión con la base de datos
+    cursor = conexion.cursor()
+
+    # Creamos un script para que inserte lo que hemos en la base de datos
+    script_insercion = 'insert into ropa (nombre, foto, tipo_prenda, temporada, precio) values(%s,%s,%s,%s,%s)'
+
+    # Creamos desde la conexión de la base datos para ir añadiendo en el orden los datos que queramos añadirle
+    cursor.execute(script_insercion, (ropa['Nombre'], ropa['Foto'], ropa['Tipo_prenda'], ropa['Temporada'], ropa['Precio']))
+
+    # Cerramos la conexión con la base de datos
+    conexion.close()
