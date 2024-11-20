@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="betis">
+    <file>real-betis-logo.png</file>
+  </qresource>
+</RCC>
