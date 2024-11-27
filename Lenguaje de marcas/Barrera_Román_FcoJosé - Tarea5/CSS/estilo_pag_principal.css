@@ -1,25 +1,55 @@
 body {
     display: flex;
+    flex-direction: column;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .grande {
     display: flex;
-}
-
-.encabezado {
-    display: flex;
     gap: 2rem;
     background-color: rgb(255, 208, 0);
+    height: 5.5rem;
+    justify-content: center;
+    align-items: center;
+}
 
+.prendas_1 {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.prendas_2 {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.titulo {
+    margin-left: 6rem;
 }
 
 .cuenta_compras {
     display: flex;
     gap: 3rem;
-    margin-left: 73rem;
+    margin-left: 61rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .cuenta_carrito {
     display: flex;
     gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
