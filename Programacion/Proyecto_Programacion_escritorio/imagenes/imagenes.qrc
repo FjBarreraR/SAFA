@@ -1,5 +1,10 @@
 <RCC>
   <qresource prefix="betis">
+    <file>icons8-base-de-datos-50.png</file>
+    <file>icons8-añadir-50.png</file>
+    <file>icons8-actualizar-30.png</file>
+    <file>icons8-basura-50.png</file>
+    <file>icons8-buscar-50.png</file>
     <file>real-betis-logo.png</file>
   </qresource>
 </RCC>

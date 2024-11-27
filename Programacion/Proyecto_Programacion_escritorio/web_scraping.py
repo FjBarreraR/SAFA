@@ -67,4 +67,3 @@ def web_scraping():
 
     return lista_ropa
 
-print(web_scraping())

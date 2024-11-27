@@ -267,7 +267,7 @@
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="QLineEdit" name="Nombre">
+                   <widget class="QLineEdit" name="input_nombre">
                     <property name="minimumSize">
                      <size>
                       <width>0</width>
@@ -295,7 +295,7 @@
                    </widget>
                   </item>
                   <item row="1" column="1">
-                   <widget class="QLineEdit" name="Foto">
+                   <widget class="QLineEdit" name="input_foto">
                     <property name="minimumSize">
                      <size>
                       <width>0</width>
@@ -323,7 +323,7 @@
                    </widget>
                   </item>
                   <item row="2" column="1">
-                   <widget class="QLineEdit" name="Tipodeprenda">
+                   <widget class="QLineEdit" name="input_tipodeprenda">
                     <property name="minimumSize">
                      <size>
                       <width>0</width>
@@ -351,7 +351,7 @@
                    </widget>
                   </item>
                   <item row="3" column="1">
-                   <widget class="QLineEdit" name="Temporada">
+                   <widget class="QLineEdit" name="input_temporada">
                     <property name="minimumSize">
                      <size>
                       <width>0</width>
@@ -379,7 +379,7 @@
                    </widget>
                   </item>
                   <item row="4" column="1">
-                   <widget class="QLineEdit" name="precioLineEdit">
+                   <widget class="QLineEdit" name="input_precio">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -707,14 +707,7 @@
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_7">
                 <item>
-                 <widget class="QLabel" name="label_10">
-                  <property name="text">
-                   <string>TextLabel</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_7">
+                 <widget class="QLineEdit" name="input_eliminar">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -724,7 +717,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton">
+                 <widget class="QPushButton" name="bot_eliminar">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -743,8 +736,8 @@
                    <string>Eliminar</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="imagenes/imagenes.qrc">
-                    <normaloff>:/betis/icons8-basura-50.png</normaloff>:/betis/icons8-basura-50.png</iconset>
+                   <iconset>
+                    <normaloff>imagenes/icons8-basura-50.png</normaloff>imagenes/icons8-basura-50.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>

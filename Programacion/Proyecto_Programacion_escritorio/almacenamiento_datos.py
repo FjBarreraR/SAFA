@@ -103,7 +103,7 @@ def consultar_datos():
     cursor.execute(script_consulta)
 
     # Hacemos una variable en la que se guarden los datos
-    datos = cursor.fetchall()
+    lista_ropa = cursor.fetchall()
 
     # Cerramos la conexión
     conexión.close()
@@ -112,7 +112,7 @@ def consultar_datos():
     return lista_ropa
 
 # Función para eliminar de la base de datos
-def eleminar(id):
+def eliminar(id):
 
     # Conectamos con la base de datos
     conexion = conectar_bbdd()
@@ -148,4 +148,6 @@ def insertar_datos(ropa):
     cursor.execute(script_insercion, (ropa['Nombre'], ropa['Foto'], ropa['Tipo_prenda'], ropa['Temporada'], ropa['Precio']))
 
     # Cerramos la conexión con la base de datos
+
     conexion.close()
+
