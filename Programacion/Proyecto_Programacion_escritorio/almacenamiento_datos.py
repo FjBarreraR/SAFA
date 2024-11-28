@@ -61,7 +61,7 @@ def conectar_bbdd():
 
     # Devolvemos la conexión para utilizarla más adelante
     return bd.connect(**parametros_conexion)
-
+conectar_bbdd()
 # Función para volcar los datos a nuestra base de datos
 def volcado_datos():
 
@@ -151,3 +151,32 @@ def insertar_datos(ropa):
 
     conexion.close()
 
+def actualizar_datos(id_prenda, nuevos_datos):
+    conexion = conectar_bbdd()
+    cursor = conexion.cursor()
+
+    try:
+        query:"""
+        UPDATE ropa
+        SET nombre = %s, foto = %s, tipo_prenda = %s, temporada = %s, precio = %s
+        WHERE id = %s
+        """
+
+        valores = (
+            nuevos_datos['Nombre'],
+            nuevos_datos['Foto'],
+            nuevos_datos['Tipo_prenda'],
+            nuevos_datos['Temporada'],
+            nuevos_datos['Precio'],
+            id_prenda
+        )
+
+        cursor.execute(query, valores)
+
+        conexion.commit()
+
+    except Exception as e:
+        conexion.rollback()
+
+    finally:
+        conexion.close()

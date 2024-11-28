@@ -17,6 +17,7 @@ class MiVentana(QMainWindow):
     # Conectar botón de aceptar
         self.bot_aceptar.clicked.connect(self.crear_nueva_prenda)
         self.bot_eliminar.clicked.connect(self.eliminar_prenda)
+        self.bot_buscar.clicked.connect(self.actualizar_prenda)
 
     def cargar_datos_tabla(self):
         self.stackedWidget.setCurrentWidget(self.base_de_datos)
@@ -45,6 +46,24 @@ class MiVentana(QMainWindow):
     def eliminar_prenda(self):
         eliminar(self.input_eliminar.text())
         self.input_eliminar.setText("")
+        QMessageBox.information(self, "Éxito", "Prenda eliminada con éxito")
+
+    def actualizar_prenda(self):
+        id_prenda = int(self.line_id.text())
+        nuevos_datos = {
+            'Nombre': self.linea_nombre.text(),
+            'Foto': self.linea_foto.text(),
+            'Tipo_prenda': self.linea_prenda.text(),
+            'Temporada': self.linea_temporada.text(),
+            'Precio': float(self.linea_precio.text())
+        }
+
+        actualizar_datos(id_prenda, nuevos_datos)
+        self.linea_nombre.setText("")
+        self.linea_foto.setText("")
+        self.linea_prenda.setText("")
+        self.linea_precio.setText("")
+        self.linea_temporada.setText("")
 
 
 

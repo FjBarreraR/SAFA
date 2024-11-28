@@ -467,7 +467,7 @@
                   <item>
                    <layout class="QHBoxLayout" name="horizontalLayout_5">
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_6">
+                     <widget class="QLineEdit" name="line_id">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -603,7 +603,7 @@
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QLineEdit" name="lineEdit">
+                           <widget class="QLineEdit" name="linea_nombre">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -616,7 +616,7 @@
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLineEdit" name="lineEdit_2">
+                           <widget class="QLineEdit" name="linea_foto">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -629,7 +629,7 @@
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLineEdit" name="lineEdit_3">
+                           <widget class="QLineEdit" name="linea_prenda">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -642,7 +642,7 @@
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLineEdit" name="lineEdit_4">
+                           <widget class="QLineEdit" name="linea_precio">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -655,7 +655,7 @@
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLineEdit" name="lineEdit_5">
+                           <widget class="QLineEdit" name="linea_temporada">
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
@@ -678,7 +678,7 @@
                  </layout>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton_8">
+                 <widget class="QPushButton" name="bot_actu">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
