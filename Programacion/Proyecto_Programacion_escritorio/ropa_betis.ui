@@ -199,6 +199,9 @@
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
             <widget class="QWidget" name="registrar_page">
              <layout class="QVBoxLayout" name="verticalLayout_4">
               <property name="spacing">

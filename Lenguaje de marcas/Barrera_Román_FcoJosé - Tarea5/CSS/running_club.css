@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.grande {
+    display: flex;
+    gap: 2rem;
+    background-color: rgb(255, 208, 0);
+    height: 5.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.titulo {
+    margin-left: 6rem;
+}
+
+.cuenta_compras {
+    display: flex;
+    gap: 3rem;
+    margin-left: 61rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuenta_carrito {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.cuatro_primeras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.tres_segundas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.sudaderas {
+    display: flex;
+    flex-direction: column;
+}
+
+.camisetas {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: 6rem;
+}

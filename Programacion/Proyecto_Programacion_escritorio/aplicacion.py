@@ -1,9 +1,12 @@
+# Bibliotecas
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 from almacenamiento_datos import *
 
+# Creamos una clase
 class MiVentana(QMainWindow):
+    #Creamos la primera función
     def __init__(self):
         super().__init__()
         uic.loadUi('ropa_betis.ui', self)
@@ -17,8 +20,10 @@ class MiVentana(QMainWindow):
     # Conectar botón de aceptar
         self.bot_aceptar.clicked.connect(self.crear_nueva_prenda)
         self.bot_eliminar.clicked.connect(self.eliminar_prenda)
-        self.bot_buscar.clicked.connect(self.actualizar_prenda)
+        self.bot_buscar.clicked.connect(self.buscar_id_prenda)
+        self.bot_actu.clicked.connect(self.actualizar_prenda)
 
+    # Cargar los datos de la base de datos a la aplicación
     def cargar_datos_tabla(self):
         self.stackedWidget.setCurrentWidget(self.base_de_datos)
         ropa = consultar_datos()
@@ -29,6 +34,7 @@ class MiVentana(QMainWindow):
                 self.tabla_base_datos.setItem(fila, columna, QTableWidgetItem(str(campo_ropa)))
         self.tabla_base_datos.resizeColumnsToContents()
 
+    # Crear nuevos registros en la base de datos
     def crear_nueva_prenda(self):
         nueva_prenda = dict()
         nueva_prenda['Nombre'] = self.input_nombre.text()
@@ -43,19 +49,32 @@ class MiVentana(QMainWindow):
         self.input_precio.setText("")
         insertar_datos(nueva_prenda)
 
+    # Eliminar datos de la base de datos
     def eliminar_prenda(self):
         eliminar(self.input_eliminar.text())
         self.input_eliminar.setText("")
         QMessageBox.information(self, "Éxito", "Prenda eliminada con éxito")
 
+    # Buscar por id en la base de datos
+    def buscar_id_prenda(self):
+        id = self.line_id.text()
+        lista_ropa = buscar_id(id)
+
+        self.linea_nombre.setText(lista_ropa[0]['nombre'])
+        self.linea_foto.setText(lista_ropa[0]['foto'])
+        self.linea_prenda.setText(lista_ropa[0]['tipo_prenda'])
+        self.linea_temporada.setText(lista_ropa[0]['temporada'])
+        self.linea_precio.setText(str(lista_ropa[0]['precio']))
+
+    # Actualizar la base de datos
     def actualizar_prenda(self):
         id_prenda = int(self.line_id.text())
         nuevos_datos = {
-            'Nombre': self.linea_nombre.text(),
-            'Foto': self.linea_foto.text(),
-            'Tipo_prenda': self.linea_prenda.text(),
-            'Temporada': self.linea_temporada.text(),
-            'Precio': float(self.linea_precio.text())
+            'nombre': self.linea_nombre.text(),
+            'foto': self.linea_foto.text(),
+            'tipo_prenda': self.linea_prenda.text(),
+            'temporada': self.linea_temporada.text(),
+            'precio': float(self.linea_precio.text())
         }
 
         actualizar_datos(id_prenda, nuevos_datos)

@@ -1,7 +1,6 @@
 body {
     display: flex;
     flex-direction: column;
-
 }
 
 * {
@@ -17,6 +16,7 @@ body {
     height: 5.5rem;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .prendas_1 {
@@ -25,6 +25,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .prendas_2 {
@@ -33,6 +34,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .titulo {
@@ -52,4 +54,8 @@ body {
     gap: 1rem;
     justify-content: center;
     align-items: center;
+}
+
+.footer {
+    margin-top: 6rem;
 }

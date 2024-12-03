@@ -151,32 +151,24 @@ def insertar_datos(ropa):
 
     conexion.close()
 
+# Actualizar la base de datos
 def actualizar_datos(id_prenda, nuevos_datos):
     conexion = conectar_bbdd()
     cursor = conexion.cursor()
-
-    try:
-        query:"""
+    query = """
         UPDATE ropa
         SET nombre = %s, foto = %s, tipo_prenda = %s, temporada = %s, precio = %s
         WHERE id = %s
         """
+    cursor.execute(query, (nuevos_datos['nombre'], nuevos_datos['foto'],nuevos_datos['tipo_prenda'], nuevos_datos['temporada'], nuevos_datos['precio'], id_prenda))
+    conexion.close()
 
-        valores = (
-            nuevos_datos['Nombre'],
-            nuevos_datos['Foto'],
-            nuevos_datos['Tipo_prenda'],
-            nuevos_datos['Temporada'],
-            nuevos_datos['Precio'],
-            id_prenda
-        )
-
-        cursor.execute(query, valores)
-
-        conexion.commit()
-
-    except Exception as e:
-        conexion.rollback()
-
-    finally:
-        conexion.close()
+# Buscar por id
+def buscar_id(id):
+    conexion = conectar_bbdd()
+    cursor = conexion.cursor(dictionary=True)
+    select_query = "select * from ropa where id =" + str(id)
+    cursor.execute(select_query)
+    lista_ropa = cursor.fetchall()
+    conexion.close()
+    return lista_ropa
