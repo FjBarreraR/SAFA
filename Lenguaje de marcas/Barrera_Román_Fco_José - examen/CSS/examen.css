@@ -1,0 +1,100 @@
+header{
+    background-color: #c7c3c3;
+}
+
+.barra_navegacion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    justify-content: left;
+}
+
+.grande {
+    display: flex;
+}
+
+.izquierda {
+    background-color: #d9e9ff;
+}
+
+.ruta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.eventos_hoy {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.actividades {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.grande {
+    margin-top: 2rem;
+}
+
+.centro {
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjetas_1_2 {
+    display: flex;
+    gap: 3rem;
+    margin-left: 2rem;
+    flex-wrap: wrap;
+}
+
+.tarjetas_3_4 {
+    display: flex;
+    gap: 5rem;
+    margin-left: 2rem;
+    flex-wrap: wrap;
+}
+
+.tarjeta_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton2 {
+    border: none;
+    border-radius: 20%;
+}
+
+.tarjeta_3 {
+    justify-content: left;
+}
+
+.derecha {
+    background-color: #d9e9ff;
+}
+
+.parte_derecha {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+}
