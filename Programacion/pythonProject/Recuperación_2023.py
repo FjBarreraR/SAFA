@@ -1,5 +1,3 @@
-
-
 def ej_1(texto):
     contador = 0
     texto = texto
