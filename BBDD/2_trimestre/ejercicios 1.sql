@@ -1,5 +1,7 @@
 use espanya;
 
+/* Ejercicios Municipios */
+
 /* 1º Ejercicio */
 SELECT nombre_es
 FROM comunidades_autonomas
@@ -109,6 +111,16 @@ join provincias p on (ca.id = p.id_com_auto)
 group by ca.nombre
 order by 2 desc;
 
+/* 19º Ejercicio */
+select ca.nombre 
+from comunidades_autonomas ca
+join provincias p on (ca.id = p.id_com_auto)
+where substr(p.nombre, 1, 1) in ('A', 'E', 'I', 'O', 'U')
+group by ca.nombre;
 
+/* 20º Ejercicio */
+select nombre
+from municipios
+where char_length(nombre) = 5 order by 1;
 
 
