@@ -2,6 +2,7 @@ package Utilidades;
 
 import Modelos.Cliente;
 import Modelos.Factura;
+import Modelos.LineaFactura;
 import Modelos.tipoCliente;
 
 import java.time.LocalDate;
@@ -17,5 +18,22 @@ public class UtilidadesFactura {
         }
     }
 
+    public Double calcularBaseFactura(Factura factura) {
+        Double baseImporte = 0.00;
+        for (LineaFactura producto : factura.getLineaFacturas()){
+            Double ImporteProducto = producto.getProducto().getPrecio();
+            Integer cantidad = producto.getCantidad();
+            baseImporte += ImporteProducto*cantidad;
+        }
+        return baseImporte;
+    }
+
+    public Double calcularTotalAPagar(Factura factura) {
+        Double impBase = factura.getImporteBase();
+        Double desc = factura.getDescuento();
+        Double iva = factura.getIva();
+
+        return (impBase - desc) * iva;
+    }
 
 }

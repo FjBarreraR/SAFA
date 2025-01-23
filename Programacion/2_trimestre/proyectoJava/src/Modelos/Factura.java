@@ -14,7 +14,16 @@ public class Factura {
     private LocalDate fechaEmision;
     private LocalDate fechaVencimiento;
     private Boolean pagada;
-    private List <Cliente> clientes;
+    private List <LineaFactura> lineaFacturas;
+    private Cliente cliente;
+
+    public List<LineaFactura> getLineaFacturas() {
+        return lineaFacturas;
+    }
+
+    public void setLineaFacturas(List<LineaFactura> lineaFacturas) {
+        this.lineaFacturas = lineaFacturas;
+    }
 
     public Integer getIdentificador() {
         return identificador;
@@ -88,18 +97,18 @@ public class Factura {
         this.pagada = pagada;
     }
 
-    public List<Cliente> getClientes() {
-        return clientes;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setClientes(List<Cliente> clientes) {
-        this.clientes = clientes;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public Factura() {
     }
 
-    public Factura(Integer identificador, String codigoFactura, Double importeBase, Double descuento, Double iva, Double totalAPagar, LocalDate fechaEmision, LocalDate fechaVencimiento, Boolean pagada, List<Cliente> clientes) {
+    public Factura(Integer identificador, String codigoFactura, Double importeBase, Double descuento, Double iva, Double totalAPagar, LocalDate fechaEmision, LocalDate fechaVencimiento, Boolean pagada, List<LineaFactura> lineaFacturas, Cliente cliente) {
         this.identificador = identificador;
         this.codigoFactura = codigoFactura;
         this.importeBase = importeBase;
@@ -109,19 +118,20 @@ public class Factura {
         this.fechaEmision = fechaEmision;
         this.fechaVencimiento = fechaVencimiento;
         this.pagada = pagada;
-        this.clientes = clientes;
+        this.lineaFacturas = lineaFacturas;
+        this.cliente = cliente;
     }
 
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Factura factura = (Factura) o;
-        return Objects.equals(identificador, factura.identificador) && Objects.equals(codigoFactura, factura.codigoFactura) && Objects.equals(importeBase, factura.importeBase) && Objects.equals(descuento, factura.descuento) && Objects.equals(iva, factura.iva) && Objects.equals(totalAPagar, factura.totalAPagar) && Objects.equals(fechaEmision, factura.fechaEmision) && Objects.equals(fechaVencimiento, factura.fechaVencimiento) && Objects.equals(pagada, factura.pagada) && Objects.equals(clientes, factura.clientes);
+        return Objects.equals(identificador, factura.identificador) && Objects.equals(codigoFactura, factura.codigoFactura) && Objects.equals(importeBase, factura.importeBase) && Objects.equals(descuento, factura.descuento) && Objects.equals(iva, factura.iva) && Objects.equals(totalAPagar, factura.totalAPagar) && Objects.equals(fechaEmision, factura.fechaEmision) && Objects.equals(fechaVencimiento, factura.fechaVencimiento) && Objects.equals(pagada, factura.pagada) && Objects.equals(lineaFacturas, factura.lineaFacturas) && Objects.equals(cliente, factura.cliente);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(identificador, codigoFactura, importeBase, descuento, iva, totalAPagar, fechaEmision, fechaVencimiento, pagada, clientes);
+        return Objects.hash(identificador, codigoFactura, importeBase, descuento, iva, totalAPagar, fechaEmision, fechaVencimiento, pagada, lineaFacturas, cliente);
     }
 
     @Override
@@ -136,7 +146,8 @@ public class Factura {
                 ", fechaEmision=" + fechaEmision +
                 ", fechaVencimiento=" + fechaVencimiento +
                 ", pagada=" + pagada +
-                ", clientes=" + clientes +
+                ", lineaFacturas=" + lineaFacturas +
+                ", cliente=" + cliente +
                 '}';
     }
 }
