@@ -22,7 +22,17 @@ public class UtilidadesContrato {
         return NumContratosPorTipo;
     }
 
-    public Map<TipoContrato, List<Contrato> getListContratosPorTipo((List<Contrato> contratos){
-
+    public Map<TipoContrato, List<Contrato>> getListContratosPorTipo (List<Contrato> contratos){
+        Map<TipoContrato, List <Contrato>> ListContratosPorTipo = new HashMap<>();
+        List <Contrato> contratosLista = new ArrayList<>();
+        for (Contrato cont : contratos) {
+            //MAPA VACIO
+            if(!ListContratosPorTipo.containsKey(cont.getTipoContrato())) {
+                ListContratosPorTipo.put(cont.getTipoContrato(), cont.getTipoContrato());
+            }else{
+                ListContratosPorTipo.put(cont.getTipoContrato(), ListContratosPorTipo.get(cont.getTipoContrato()));
+            }
+        }
+        return ListContratosPorTipo;
     }
 }
