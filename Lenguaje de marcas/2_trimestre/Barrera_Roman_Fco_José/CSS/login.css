@@ -1,0 +1,29 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-image:url(../IMÁGENES/imagen_fondo.jpg);
+}
+
+
+.formulario{
+    background-color: rgb(165, 102, 61);
+    padding: 5%;
+    text-align: center;
+    margin-top: 17%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 15px;
+    position: relative;
+}
+
+.cruz{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.titulo h1{
+    background-color: aqua;
+}   
