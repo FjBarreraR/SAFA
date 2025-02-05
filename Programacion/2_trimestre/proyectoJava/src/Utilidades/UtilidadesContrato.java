@@ -1,6 +1,7 @@
 package Utilidades;
 
 import Modelos.Contrato;
+import Modelos.Empleado;
 import Modelos.Empresa;
 import Modelos.TipoContrato;
 
@@ -61,5 +62,17 @@ public class UtilidadesContrato {
             }
         }
         return ListContratosPorTipo;
+    }
+
+    public Empleado contratarTrabajador(Empresa e, String dni, String nombre, String apellidos, String direccion, String telefono, TipoContrato tipo, Double salario){
+        Empleado emp = new Empleado();
+        Contrato contrato = new Contrato();
+        emp.setDni(dni);
+        emp.setNombre(nombre);
+        emp.setApellido(apellidos);
+        emp.setDireccion(direccion);
+        emp.setEmpresa(e);
+        emp.setNumTelefono(telefono);
+        emp.();
     }
 }

@@ -95,4 +95,29 @@ public class UtilidadesEmpresa {
         return empleadosPorTipoContrato;
     }
 
+    public List<Empleado> getEmpleadosPymePracticas(List<Empresa> empresas){
+        List<Empleado> empleadosPymePracticas= new ArrayList<>();
+        for (Empresa empresa : empresas){
+            if (empresa.getTipoEmpresa().equals(tipoEmpresa.PYME)){
+                for (Empleado empleado : empresa.getEmpleados()){
+                    if (empleado.getContrato().getTipoContrato().equals(TipoContrato.PRACTICAS)){
+                        empleadosPymePracticas.add(empleado);
+                    }
+                }
+            }
+
+        }
+        return empleadosPymePracticas;
+    }
+
+    public Map<Empresa,Empleado> getLosMejorPagadosPorEmpresa(List<Empresa> empresas){
+        Map<Empresa,Empleado> losMejorPagados= new HashMap<>();
+        for (Empresa empresa : empresas){
+            losMejorPagados.put(empresa, getMileuristasOrdenadosPorSalario(empresa).getFirst());
+        }
+
+        return losMejorPagados;
+    }
+
+
 }
