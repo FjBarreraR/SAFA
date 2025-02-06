@@ -9,7 +9,22 @@ import java.util.Map;
 
 public class UtilidadesAlmacen {
     public boolean validarAlmacenes(List<Producto> productos){
-        Map<Producto, Integer> mapProductos = new HashMap<>();
-        
+        Map<Almacen, Integer> mapProductos = new HashMap<>();
+        for (Producto producto: productos){
+            if (mapProductos.containsKey(producto.getAlmacen())){
+                mapProductos.put(producto.getAlmacen(), mapProductos.get(producto.getAlmacen()) + 1);
+            } else {
+                mapProductos.put(producto.getAlmacen(), 1);
+            }
+        }
+        Boolean validado = false;
+        for(Almacen almacen : mapProductos.keySet()){
+            if (almacen.getCapacidad()> mapProductos.get(almacen)){
+                validado = true;
+            } else {
+                validado = false;
+            }
+        }
+        return validado;
     }
 }
