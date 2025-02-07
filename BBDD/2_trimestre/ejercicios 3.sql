@@ -45,6 +45,28 @@ from libros
 having titulo = "%de%";
 
 /* Ejercicio 12 */
+SELECT titulo, LENGTH(titulo) longitud, concat(upper(substr(titulo, 1, 6)), lower(substr(titulo, 7, char_length(titulo))))
+FROM libros;
+
+/* Ejercicio 13 */
+select avg(precio)
+from libros;
+
+select * from libros where precio > (select avg(precio) from libros);
+
+/* Ejercicio 14 */
+select concat(datediff(current_date(), fecha_publicacion))
+from libros;
+
+/* Ejercicio 15 */
+select round(power(precio, 2)) 
+from libros;
+
+/* Ejercicio 16 */
 
 
+/* Ejercicio 17 */
+select current_date() , titulo
+from libros
+where date_add(current_date(), interval -50 year);
 
