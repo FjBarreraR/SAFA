@@ -22,3 +22,9 @@ body{
     color: rgb(136, 82, 46);;
     color: white;
 }
+
+.images{
+    margin-top: 10%;
+    padding: 5%;
+    align-items: center;
+}   
