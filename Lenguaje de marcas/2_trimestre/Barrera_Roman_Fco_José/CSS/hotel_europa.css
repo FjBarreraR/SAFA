@@ -39,35 +39,3 @@ body{
     margin-top: 2rem;
     flex-wrap: wrap;
 }
-
-.prendas_2 {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.titulo {
-    margin-left: 6rem;
-}
-
-.cuenta_compras {
-    display: flex;
-    gap: 3rem;
-    margin-left: 61rem;
-    justify-content: center;
-    align-items: center;
-}
-
-.cuenta_carrito {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer {
-    margin-top: 6rem;
-}

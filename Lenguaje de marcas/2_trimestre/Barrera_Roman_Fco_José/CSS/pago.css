@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-image:url(../IMÁGENES/imagen_prueba_1.jpg);
+    
+}
+
+.barra{
+    background-color: rgb(165, 102, 61);
+    color: whitesmoke;
+    margin-bottom: 0%;
+    align-items: center;
+}
+
+.barra img{
+    width: 100px;
+    
+}
+
+.titulo1{
+    text-align: center;
+    color: rgb(136, 82, 46);;
+    color: white;
+}
+
+.images{
+    margin-top: 10%;
+    padding: 5%;
+    align-items: center;
+}
