@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../IMÁGENES/imagen_fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    flex-direction: column; /* Para que el título quede encima */
+}
+
+.form_registro{
+    background-color: rgb(165, 102, 61);
+    padding: 2%;
+    color: black;
+    border-radius: 25px;
+}
+
+.registro{
+    background-color: rgb(165, 102, 61);
+    padding: 1%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
