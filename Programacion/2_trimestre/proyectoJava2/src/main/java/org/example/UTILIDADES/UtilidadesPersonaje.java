@@ -78,3 +78,8 @@ public class UtilidadesPersonaje {
         return personajesMap;
     }
 }
+
+
+
+
+
