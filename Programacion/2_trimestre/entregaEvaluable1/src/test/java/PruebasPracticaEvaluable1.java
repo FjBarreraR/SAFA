@@ -1,5 +1,3 @@
-package org.example;
-
 import org.example.MODELOS.Alumno;
 import org.example.MODELOS.Colegio;
 import org.example.MODELOS.Curso;
@@ -23,12 +21,12 @@ public class PruebasPracticaEvaluable1 {
         colegios.add(colegio);
 
         UtilidadesColegio utilidades = new UtilidadesColegio();
-//        System.out.println(UtilidadesColegio.totalAlumnos(colegios));
+        System.out.println(UtilidadesColegio.totalAlumnos(colegios));
 
-//        System.out.println(UtilidadesColegio.mayoresEdad(colegio));
+        System.out.println(UtilidadesColegio.mayoresEdad(colegio));
 
-//        System.out.println(UtilidadesColegio.totalAlumnosPorColegio(colegios));
+        System.out.println(UtilidadesColegio.totalAlumnosPorColegio(colegios));
 
-//        System.out.println(UtilidadesColegio.alumnosPorCurso(colegio));
+        System.out.println(UtilidadesColegio.alumnosPorCurso(colegio));
     }
 }

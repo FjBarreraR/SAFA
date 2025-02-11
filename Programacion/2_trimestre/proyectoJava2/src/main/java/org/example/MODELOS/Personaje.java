@@ -150,7 +150,7 @@ public class Personaje {
         this.mana = mana;
     }
 
-    public javax.swing.plaf.synth.Region getRegion() {
+    public Region getRegion() {
         return region;
     }
 
