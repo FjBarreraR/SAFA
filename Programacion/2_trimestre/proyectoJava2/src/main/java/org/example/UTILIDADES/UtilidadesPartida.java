@@ -9,6 +9,6 @@ import java.util.List;
 
 public class UtilidadesPartida implements IUtilidadesPartida {
     private void inicializarPartida(Partida partida, List<Jugador> participantes, List<Personaje> personajesDisponibles){
-
+        
     }
 }
