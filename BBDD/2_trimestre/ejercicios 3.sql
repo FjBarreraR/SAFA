@@ -70,3 +70,19 @@ select current_date() , titulo
 from libros
 where date_add(current_date(), interval -50 year);
 
+/* Ejercicio 18 */
+select titulo, round(abs((precio / 10) - precio), 2) precio_con_descuento
+from libros;
+
+/* Ejercicio 19 */
+select case when precio > 25 then concat(titulo, " Edición Especial")
+else titulo end
+from libros;
+
+/* Ejercicio 20 */
+select right(titulo, 4)
+from libros;
+
+/* Ejercicio 21 */
+select upper(concat(titulo, extract(year from fecha_publicacion)))
+from libros;	
