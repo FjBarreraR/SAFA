@@ -8,19 +8,21 @@ import java.util.*;
 
 public class UtilidadesPersonaje {
     public Personaje levelUp (Personaje personaje){
+        personaje.setNivel(personaje.getNivel() + 1);
+
         Personaje personaje1 = new Personaje();
         Double ataqueBase = personaje1.getAtaqueBase();
         Double defensaBase = personaje1.getDefensaBase();
         Double vidaBase = personaje1.getVidaBase();
         Double manaBase = personaje1.getManaBase();
 
-        ataqueBase = ataqueBase + personaje1.getEscalabilidad().getIncrementoDanyoNivel() * 1;
+        ataqueBase = ataqueBase + personaje1.getEscalabilidad().getIncrementoDanyoNivel() * personaje1.getNivel();
         personaje1.setAtaqueBase(ataqueBase);
-        defensaBase = defensaBase + personaje1.getEscalabilidad().getIncrementoDefensaNivel() * 1;
+        defensaBase = defensaBase + personaje1.getEscalabilidad().getIncrementoDefensaNivel() * personaje1.getNivel();
         personaje1.setDefensaBase(defensaBase);
-        vidaBase = vidaBase + personaje1.getEscalabilidad().getIncrementoSaludNivel() * 1;
+        vidaBase = vidaBase + personaje1.getEscalabilidad().getIncrementoSaludNivel() * personaje1.getNivel();
         personaje1.setVidaBase(vidaBase);
-        manaBase = manaBase + personaje1.getEscalabilidad().getIncrementoManaNivel() * 1;
+        manaBase = manaBase + personaje1.getEscalabilidad().getIncrementoManaNivel() * personaje1.getNivel();
         personaje1.setManaBase(manaBase);
 
         return personaje1;
@@ -65,7 +67,7 @@ public class UtilidadesPersonaje {
             personajeMasPoderoso.add(personaje1);
         }
         personajeMasPoderoso.sort(Comparator.comparing(p -> p.getAtaque()+ p.getDefensa()+ p.getMana()+ p.getVida()));
-        return personajeMasPoderoso.get(0);
+        return personajeMasPoderoso.getLast();
     }
 
     public Map<Region, Personaje> getMasPoderosoPorRegion(List<Personaje> personajes){
