@@ -1,0 +1,90 @@
+<!--Ejercicio 1-->
+<?xml version="1.0" encodin="UTF-8"?>
+<figuras>
+    <figura tipo="plana">
+        <nombre>cuadrado</nombre>
+        <lados>4</lados>
+    </figura>
+    <figura tipo="plana">
+        <nombre>triángulo</nombre>
+        <lados>3</lados>
+    </figura>
+    <figura tipo="tridimensional">
+        <nombre>cubo</nombre>
+        <aristas>12</aristas>
+        <caras>6</caras>
+    </figura>
+</figuras>
+
+<!--Ejercicio 2-->
+<? xml versión="1.0" enconding="UTF-8"?>
+<terrestres>
+    <vehiculo>bicicleta</vehiculo>
+    <vehiculo>coche</vehiculo>
+    <vehiculo>tractor</vehiculo>
+</terrestres>
+<acuaticos>
+    <vehiculo>canoa<vehiculo>
+</acuaticos>
+<aereos>
+    <vehiculo>avioneta<vehiculo>
+    <vehiculo>helicóptero<vehiculo>
+</aereos>
+
+<!--Ejercicio 3-->
+<equipos>
+    <equipo>
+        <nombre>FC Barcelona</nombre>
+        <ciudad>Barcelona</ciudad>
+        <entrenador></entrenador>
+
+        <jugadores>
+            <jugador posicion="delantero">
+                <nombre>Lamine Yamal</nombre>
+                <nacionalidad>Español</nacionalidad>
+            </jugador>
+                
+            <jugador posicion="defensa">
+                <nombre>Alejandro Balde</nombre>
+                <nacionalidad>Español</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+
+    <equipo>
+        <nombre>Real Betis Balompié</nombre>
+        <ciudad>Sevilla</ciudad>
+        <entrenador></entrenador>
+
+        <jugadores>
+            <jugador posicion="delantero">
+                <nombre>Giovani Lo Celso</nombre>
+                <nacionalidad>Argentino</nacionalidad>
+            </jugador>
+                
+            <jugador posicion="defensa">
+                <nombre>Marc Bartra</nombre>
+                <nacionalidad>Español</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+</equipos>
+
+<!--Ejercicio 4-->
+<cancion año="2008" duracion="4:47">
+    <titulo>Give it 2 me</titulo>
+    <compositores>
+        <compositor>
+            <nombre>Pharrell</nombre>
+            <apellidos>Williams</apellidos>
+        </compositor>
+    </compositores>
+    <productores>
+        <productor>
+            <nombre>Pharrell</nombre>
+            <apellidos>Williams</apellidos>
+        </productor>
+    </productores>
+    <sello>Warner Bros. Records</sello>
+    <artista>Madonna</artista>
+</cancion>

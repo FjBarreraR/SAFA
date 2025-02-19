@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Ejercicio 1-->
+
+<cancion>
+    <titulo>Rock with you</titulo>
+    <compositor>Red Temperton</compositor>
+    <productor>Quincy Jones</productor>
+    <discográfica>Epic</discográfica>
+    <artista>Michael Jackson</artista>
+</cancion>
+
+<!--Ejercicio 2-->
+
+<cancion duracion="3:40" año="1979">
+    <titulo>Rock with you</titulo>
+    <compositores>
+        <compositor>
+            <nombre>Rod</nombre>
+            <apellidos>Temperton</apellidos>
+        </compositor>
+    </compositores>
+    <discográfica>Epic</discográfica>
+    <productores>
+        <productor>
+            <nombre>Quincy</nombre>
+            <apellidos>Jones</apellidos>
+        </productor>
+    </productores>
+    <artistas>
+        <artista>Michael Jackson</artista>
+    </artistas>
+</cancion>
+
+<!--Ejercicio 3-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<servidores>
+    <servidor>
+        <ubicacion>Sevilla</ubicacion>
+        <idServidor>ADR</idServidor>
+        <hardware>
+            <placaBase tplaca="ASD">Supermicro</placaBase>
+            <memoria>
+                <cantMem amp="GB">456123</cantMem>
+                <veloMem veloc="Ghz">3455</veloMem>
+            </memoria>
+            <TarjRed>f15w15ew</TarjRed>
+            <TecnHD>SSD</TecnHD>
+            <CapacHD ahd="Tb">7894221</CapacHD>
+        </hardware>
+
+        <marca>HP</marca>
+        <uso>Correo</uso>
+        <fecha_uf> 2023-02-14</fecha_uf>
+    </servidor>
+    
+    <servidor>
+        <ubicacion>Sevilla</ubicacion>
+        <idServidor>ADR</idServidor>
+        <hardware>
+            <placaBase tplaca="ASD">Supermicro</placaBase>
+            <memoria>
+                <cantMem amp="GB">456123</cantMem>
+                <veloMem veloc="Ghz">3455</veloMem>
+            </memoria>
+            <TarjRed>f15w15ew</TarjRed>
+            <TecnHD>SSD</TecnHD>
+            <CapacHD ahd="Tb">7894221</CapacHD>
+        </hardware>
+
+        <marca>HP</marca>
+        <uso>Correo</uso>
+        <fecha_uf> 2023-02-14</fecha_uf>
+    </servidor> 
+    
+    <servidor>
+        <ubicacion>Sevilla</ubicacion>
+        <idServidor>ADR</idServidor>
+        <hardware>
+            <placaBase tplaca="ASD">Supermicro</placaBase>
+            <memoria>
+                <cantMem amp="GB">456123</cantMem>
+                <veloMem veloc="Ghz">3455</veloMem>
+            </memoria>
+            <TarjRed>f15w15ew</TarjRed>
+            <TecnHD>SSD</TecnHD>
+            <CapacHD ahd="Tb">7894221</CapacHD>
+        </hardware>
+        <marca>HP</marca>
+        <uso>Correo</uso>
+        <fecha_uf> 2023-02-14</fecha_uf>
+    </servidor>
+</servidores>
+
+<!--Ejercicio 4-->
+
+<BibliotecaSafa>
+    <ebook>
+        <titulo>Lenguaje de Marcas</titulo>
+        <Autores>
+            <autor>Alex Tolon</autor>
+        </Autores>
+        <modulo>LMSGI</modulo>
+        <licencia>CC3.0</licencia>
+        <fechaPublicación>Septiembre 2011</fechaPublicación>
+        <ISBN>978929212456</ISBN>
+        <lecciones>
+            <leccion>
+                <parrafo>Parrafo1</parrafo>
+                <parrafo>Parrafo2</parrafo>
+                <imagen>imagen1</imagen>
+                <autoevaulacion>1</autoevaulacion>
+                <autoevaulacion>2</autoevaulacion>
+                <ejercicio>Ejercicio1</ejercicio>
+            </leccion>
+            <leccion>
+                <parrafo>1</parrafo>
+                <parrafo>2</parrafo>
+                <parrafo>3</parrafo>
+                <animacion>1</animacion>
+                <autoevaulacion>1</autoevaulacion>
+                <ejercicio>1</ejercicio>
+            </leccion>
+        </lecciones>
+    </ebook>
+
+    <ebook>
+        <titulo>Empresa e Iniciativa Emprendedora</titulo>
+        <Autores>
+            <autor>Miguel Ángel Sánchez</autor>
+            <autor>Xabier Epelde</autor>
+        </Autores>
+        <modulo>EIE</modulo>
+        <licencia>Public Domain</licencia>
+        <fechaPublicación>25 de Junio de 2010</fechaPublicación>
+        <ISBN>978439288416</ISBN>
+        <lecciones>
+            <leccion>
+                <parrafo>Parrafo1</parrafo>
+                <parrafo>Parrafo2</parrafo>
+                <parrafo>Parrafo3</parrafo>
+                <animacion>1</animacion>
+                <animacion>2</animacion>
+                <autoevaulacion>1</autoevaulacion>
+                <ejercicio>Ejercicio1</ejercicio>
+                <ejercicio>Ejercicio2</ejercicio>
+            </leccion>
+        </lecciones>
+    </ebook>
+</BibliotecaSafa>
