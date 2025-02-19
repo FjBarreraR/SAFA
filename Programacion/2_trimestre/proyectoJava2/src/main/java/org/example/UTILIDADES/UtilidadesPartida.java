@@ -24,8 +24,8 @@ public class UtilidadesPartida implements IUtilidadesPartida {
                        repartirPersonajes.put(j, pD);
                        personajesDisponibles.remove(pD);
                 } else {
-                    repartirPersonajes.put(j, personajesDisponibles.get(0));
-                    personajesDisponibles.remove(0);
+                    repartirPersonajes.put(j, personajesDisponibles.getFirst());
+                    personajesDisponibles.removeFirst();
                 }
             }
         }
@@ -35,13 +35,14 @@ public class UtilidadesPartida implements IUtilidadesPartida {
         Set<Jugador> Equipo1 = new HashSet<>();
         Set<Jugador> Equipo2 = new HashSet<>();
 
-        Integer jugadores = participantes.size();
-
-        for (int i=0; i<jugadores; i++) {
-            if (i<(jugadores/2)) {
-                Equipo1.add(participantes.get(i));
-            } else {
-                Equipo2.add(participantes.get(i));
+        int jugadores = participantes.size();
+        if (jugadores % 2 == 0){
+            for (int i=0; i<jugadores; i++) {
+                if (i<(jugadores/2)) {
+                    Equipo1.add(participantes.get(i));
+                } else {
+                    Equipo2.add(participantes.get(i));
+                }
             }
         }
 
@@ -58,7 +59,7 @@ public class UtilidadesPartida implements IUtilidadesPartida {
         partida.setFinPartida(LocalDateTime.now());
 
         // iii
-        Integer duracion = (int) Duration.between(partida.getFinPartida(), partida.getFinPartida()).getSeconds();
+        partida.setDuracionPartida((int) Duration.between(partida.getFinPartida(), partida.getFinPartida()).getSeconds());
 
         // iv
         partida.setEquipoVencedor(equipoVencedor);
@@ -67,7 +68,12 @@ public class UtilidadesPartida implements IUtilidadesPartida {
         Set<Jugador> jugadoresGanados = partida.getJugadoresPorEquipo().get(equipoVencedor);
 
         for (Jugador j : jugadoresGanados) {
-            if (j.getPartidasGanadas().containsKey())
+            Personaje personajeElegido = partida.getElecciones().get(j);
+            if (j.getPartidasGanadas().containsKey(personajeElegido)){
+                j.getPartidasGanadas().put(personajeElegido, j.getPartidasGanadas().get(personajeElegido) + 1);
+            } else {
+                j.getPartidasGanadas().put(personajeElegido, 1);
+            }
         }
     }
 }
