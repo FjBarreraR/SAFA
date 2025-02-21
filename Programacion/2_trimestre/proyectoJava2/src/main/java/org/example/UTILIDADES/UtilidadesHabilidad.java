@@ -20,7 +20,7 @@ public class UtilidadesHabilidad {
 
         if (!(receptor.getEquipamiento() == null && receptor.getEquipamiento().isEmpty())){
             for (Item i : receptor.getEquipamiento()){
-                uI.equiparItem(emisor, i);
+                uI.equiparItem(receptor, i);
             }
         }
 
