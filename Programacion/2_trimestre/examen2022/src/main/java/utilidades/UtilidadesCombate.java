@@ -3,18 +3,34 @@ package utilidades;
 import org.example.modelos.Entrenador;
 import org.example.modelos.LineaEvolutiva;
 import org.example.modelos.Pokemon;
+import org.example.modelos.TipoPokemon;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class UtilidadesCombate {
     public Map<Entrenador, Integer> repartirPokemon(List<Entrenador> entrenadores, List<Pokemon> pokemon){
         Map<Entrenador, Integer> mapaEntrenadorPokemon = new HashMap<>();
 
-        if (entrenadores.size() % pokemon.size() == 0){
-            for ()
+        if (pokemon.size() % entrenadores.size() == 0){
+            int cuantosTocamosPorEntrenador = pokemon.size() / entrenadores.size();
+
+            for (Entrenador e : entrenadores) {
+                e.getEquipoPokemon().addAll(pokemon.subList(0, cuantosTocamosPorEntrenador));
+                pokemon.retainAll(pokemon.subList(0, cuantosTocamosPorEntrenador));
+            }
+        }
+
+        for (Entrenador e : entrenadores) {
+            List<TipoPokemon> tiposPreferidos = new ArrayList<>(e.getTiposPreferidos());
+
+            int puntos = 0;
+
+            for (Pokemon p : e.getEquipoPokemon()) {
+                List<TipoPokemon> tiposQueCoincieden = new ArrayList<>(p.getTipos());
+                tiposQueCoincieden.retainAll(tiposPreferidos);
+                puntos += tiposQueCoincieden.size();
+            }
+            mapaEntrenadorPokemon.put(e, puntos);
         }
         return mapaEntrenadorPokemon;
     }
