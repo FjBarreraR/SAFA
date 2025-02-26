@@ -3,5 +3,5 @@
 <!ELEMENT titulo #PCDATA>
 <!ELEMENT autor #PCDATA>
 <!ATTLIST autor fechaNacimiento CDATA #IMPLIED>
-<!ELEMENT fechaPublicacion #PCDATA>
+<!ELEMENT fechaPublicacion EMPTY>
 <!ATTLIST fechaPublicacion año CDATA #REQUIRED>
