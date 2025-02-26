@@ -1,5 +1,5 @@
-<?xml version="1.0" enconding="UTF-8">
-<!DOCTYPE biblioteca SYSTEM "ejercicio1.dtd">
+<?xml version="1.0" enconding="UTF-8" standalone="yes"?>
+<DOCTYPE biblioteca SYSTEM "ejercicio1.dtd">
 
 <biblioteca>
     <libro>
