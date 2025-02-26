@@ -5,12 +5,18 @@ import org.example.modelos.LineaEvolutiva;
 import org.example.modelos.Pokemon;
 
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class UtilidadesCombate {
     public Map<Entrenador, Integer> repartirPokemon(List<Entrenador> entrenadores, List<Pokemon> pokemon){
+        Map<Entrenador, Integer> mapaEntrenadorPokemon = new HashMap<>();
 
+        if (entrenadores.size() % pokemon.size() == 0){
+            for ()
+        }
+        return mapaEntrenadorPokemon;
     }
 
     public void subirAlNivel(Pokemon pokemon, Integer nivel){
@@ -24,15 +30,24 @@ public class UtilidadesCombate {
     }
 
     public boolean puedeEvolucionar(Pokemon pokemon){
+        boolean puedeEvolucionar = false;
+
         Integer nivel = pokemon.getNivel();
+
         Integer posicion = pokemon.getLinenaEvolutiva()
                 .stream()
                 .filter(p->p.getPokemon().getLinenaEvolutiva().equals(pokemon.getLinenaEvolutiva()))
                 .findFirst().get().getOrden();
 
-        Integer maxOden = pokemon.getLinenaEvolutiva().stream().max(Comparator.comparing(LineaEvolutiva::getOrden)).get().getOrden();
+        LineaEvolutiva lineaEvolutiva = pokemon.getLinenaEvolutiva().stream().filter(p -> p.getOrden().equals(posicion + 1)).findFirst().orElse(null);
 
-        return 
+        if (lineaEvolutiva != null ){
+            if (nivel >= lineaEvolutiva.getNivelParaEvolucionar()){
+                puedeEvolucionar = true;
+            }
+        }
+
+        return puedeEvolucionar;
     }
 
 }
