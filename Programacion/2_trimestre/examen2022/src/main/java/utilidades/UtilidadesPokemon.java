@@ -1,5 +1,6 @@
 package utilidades;
 
+import org.example.modelos.Movimiento;
 import org.example.modelos.Pokemon;
 import org.example.modelos.TipoPokemon;
 
@@ -62,7 +63,20 @@ public class UtilidadesPokemon {
 
     public Map<TipoPokemon, List<Pokemon>> obtenerPokemonPurosPorTipoStream(List<Pokemon> pokemons){
 
-        return pokemons.stream().filter(p -> p.getTipos().size()==1).collect(Collectors.groupingBy(p -> p.getTipos().get(0)));
+        return pokemons.stream().filter(p -> p.getTipos().size()==1).collect(Collectors.groupingBy(p -> p.getTipos().getFirst()));
     }
+
+    public List<Movimiento> movimientosQuePuedeAprender(Pokemon pokemon, List<Movimiento> movimientos){
+        List<Movimiento> movimientosQuePuedeAprender = new ArrayList<>();
+
+        for (Movimiento movimiento : movimientos) {
+            if (pokemon.getTipos().containsAll(movimientos)){
+                movimientosQuePuedeAprender.add(movimiento);
+            }
+        }
+
+        return movimientosQuePuedeAprender;
+    }
+
 
 }

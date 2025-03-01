@@ -66,4 +66,26 @@ public class UtilidadesCombate {
         return puedeEvolucionar;
     }
 
+    public Pokemon obtenerEvolucionPosible(Pokemon pokemon){
+        Pokemon pokEvo = null;
+
+        Integer nivel = pokemon.getNivel();
+
+        Integer posicion = pokemon.getLinenaEvolutiva()
+                .stream()
+                .filter(p->p.getPokemon().getLinenaEvolutiva().equals(pokemon.getLinenaEvolutiva()))
+                .findFirst().get().getOrden();
+
+        LineaEvolutiva lineaEvolutiva = pokemon.getLinenaEvolutiva().stream().filter(p -> p.getOrden().equals(posicion + 1)).findFirst().orElse(null);
+
+        if (lineaEvolutiva != null ){
+            if (nivel >= lineaEvolutiva.getNivelParaEvolucionar()){
+                pokEvo = lineaEvolutiva.getPokemon();
+            }
+        }
+
+        return pokEvo;
+    }
+
+
 }
