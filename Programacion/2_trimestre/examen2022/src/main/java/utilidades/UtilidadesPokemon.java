@@ -1,5 +1,6 @@
 package utilidades;
 
+import org.example.modelos.Entrenador;
 import org.example.modelos.Movimiento;
 import org.example.modelos.Pokemon;
 import org.example.modelos.TipoPokemon;
@@ -77,6 +78,36 @@ public class UtilidadesPokemon {
 
         return movimientosQuePuedeAprender;
     }
+
+    public Map<Entrenador, Integer> asignarEquipoPorTipos(List<Pokemon> pokemon, List<Entrenador> entrenadores){
+        Map<Entrenador, Integer> equipoPorTipos = new HashMap<>();
+
+        for (Entrenador entrenador : entrenadores) {
+            int contador = 0;
+            for (Pokemon p : pokemon) {
+                if (entrenador.getTiposPreferidos().containsAll(p.getTipos())){
+                    contador++;
+                }
+            }
+            equipoPorTipos.put(entrenador, contador);
+        }
+
+        return equipoPorTipos;
+    }
+
+    public Map<Entrenador, Object> coincidencias(List<Entrenador> entrenadores, List<TipoPokemon> tipos){
+        Map<Entrenador, Object> coincidencias = new HashMap<>();
+
+        for (Entrenador entrenador : entrenadores) {
+            List<TipoPokemon> tiposPreferidos = new ArrayList<>(entrenador.getTiposPreferidos());
+            if (tiposPreferidos.retainAll(tipos)){
+                coincidencias.put(entrenador, tiposPreferidos);
+            }
+        }
+
+        return coincidencias;
+    }
+
 
 
 }
