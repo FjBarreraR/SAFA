@@ -8,6 +8,9 @@ public class Persona {
         this.numeroDeTelefono = numeroDeTelefono;
     }
 
+    public Persona() {
+    }
+
     public String getNumeroDeTelefono() {
         return numeroDeTelefono;
     }
