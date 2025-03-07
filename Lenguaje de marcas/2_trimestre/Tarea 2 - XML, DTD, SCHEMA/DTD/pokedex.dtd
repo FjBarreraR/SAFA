@@ -1,0 +1,27 @@
+<!ELEMENT pokedex (pokemon)>
+<!ELEMENT pokemon (evoluciones, stats_base, tipologia, datos_generales)>
+<!ATTLIST pokemon nombre CDATA #REQUIRED>
+<!ATTLIST pokemon num_pokedex CDATA #REQUIRED>
+<!ELEMENT evoluciones (evolucion)>
+<!ELEMENT evolucion (orden, num_pokedex)>
+<!ELEMENT orden (#PCDATA)>
+<!ELEMENT num_pokedex #PCDATA>
+<!ELEMENT stats_base (vel, spde, spat, def, at, ps)>
+<!ELEMENT vel (#PCDATA)>
+<!ELEMENT spde (#PCDATA)>
+<!ELEMENT spat (#PCDATA)>
+<!ELEMENT def (#PCDATA)>
+<!ELEMENT at (#PCDATA)>
+<!ELEMENT ps (#PCDATA)>
+<!ELEMENT tipologia (debilidades, tipos)>
+<!ELEMENT debilidades (debilidad)>
+<!ELEMENT debilidad (efectividad, tipo)>
+<!ELEMENT efectividad (#PCDATA)>
+<!ELEMENT tipo (descripcion)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT datos_generales (habilidad, categoria, sexo, peso, altura)>
+<!ELEMENT habilidad (#PCDATA)>
+<!ELEMENT categoria (#PCDATA)>
+<!ELEMENT sexo (#PCDATA)>
+<!ELEMENT peso (#PCDATA)>
+<!ELEMENT altura (#PCDATA)>

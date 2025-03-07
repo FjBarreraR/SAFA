@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCTYPE pokedex SYSTEM "pokedex.dtd"?>
+<?xml-stylesheet href="pokedex.xsd" type="text/xsl"?>
+
+
+<pokedex>
+    <pokemon nombre="bulbasur" num_pokedex="1">
+        <evoluciones>
+            <evolucion>
+                <orden>-1</orden>
+                <num_pokedex>2</num_pokedex>
+            </evolucion>
+        </evoluciones>
+
+        <stats_base>
+            <vel>5</vel>
+            <spde>13</spde>
+            <spat>15</spat>
+            <def>12</def>
+            <at>10</at>
+            <ps>30</ps>
+        </stats_base>
+
+        <tipologia>
+            <debilidades>
+                <debilidad>
+                    <efectividad>x2</efectividad>
+                    <tipo>fuego</tipo>
+                </debilidad>
+            </debilidades>
+
+            <tipos>
+                <tipo>
+                    <descripcion>planta</descripcion>
+                </tipo>
+            </tipos>
+        </tipologia>
+
+        <datos_generales>
+            <habilidad>espesura</habilidad>
+            <categoria>semilla</categoria>
+            <sexo>M/F</sexo>
+            <peso>20</peso>
+            <altura>0.45</altura>
+        </datos_generales>
+    </pokemon>
+</pokedex>
