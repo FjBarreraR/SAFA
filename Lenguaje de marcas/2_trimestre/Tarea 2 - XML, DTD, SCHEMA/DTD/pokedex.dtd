@@ -5,7 +5,7 @@
 <!ELEMENT evoluciones (evolucion)>
 <!ELEMENT evolucion (orden, num_pokedex)>
 <!ELEMENT orden (#PCDATA)>
-<!ELEMENT num_pokedex #PCDATA>
+<!ELEMENT num_pokedex (#PCDATA)>
 <!ELEMENT stats_base (vel, spde, spat, def, at, ps)>
 <!ELEMENT vel (#PCDATA)>
 <!ELEMENT spde (#PCDATA)>

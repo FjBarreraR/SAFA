@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCTYPE pokedex SYSTEM "pokedex.dtd"?>
+<?DOCTYPE pokedex SYSTEM "pokedex.dtd"?>
 <?xml-stylesheet href="pokedex.xsd" type="text/xsl"?>
-
+<?xml-stylesheet href="pokedex.xslt" type="text/xsl"?>
 
 <pokedex>
     <pokemon nombre="bulbasur" num_pokedex="1">
