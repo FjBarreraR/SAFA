@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?DOCTYPE piratas SYSTEM "piratas.dtd"?>
+<?xml-stylesheet href="piratas.xsd" type="text/xsl"?>
+<?xml-stylesheet href="piratas.xslt" type="text/xsl"?>
+
+<piratas>
+    <pirata nombre="Jack Sparow" imagen="hhtps://sparrow.jpg">
+        <roles>
+            <rol>
+                <barco>La Perla Negra</barco>
+                <tipo_rol>CAPITÁN</tipo_rol>
+            </rol>
+        </roles>
+
+        <peliculas>
+            <pelicula>
+                <datos>
+                    <saga>Piratas del Caribe</saga>
+                    <titulo>La maldición de la perla negra</titulo>
+                </datos>
+            </pelicula>
+        </peliculas>
+
+        <datos_actor>
+            <nacimiento>09-06-1963</nacimiento>
+            <sexo>M</sexo>
+            <apellidos>Deep</apellidos>
+            <nombre>Johnny</nombre>
+        </datos_actor>
+    </pirata>
+</piratas>

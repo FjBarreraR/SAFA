@@ -32,5 +32,15 @@ select nombre || ' ' || habilidad_principal
 from jugadores;
 
 -- Ejercicio 8
-select nombre, fecha_nacimiento
+select nombre, to_char(fecha_nacimiento, '"Lunes" DD "de enero de " YYYY') fecha_nacimiento
 from jugadores;
+
+-- Ejercicio 9
+select TRUNC(MONTHS_BETWEEN(SYSDATE, fecha_nacimiento)/12) anyos_pasados
+from jugadores;
+
+-- Ejercicio 10
+select nombre, Case when TRUNC(MONTHS_BETWEEN(SYSDATE, fecha_nacimiento)/12)<25 then 'Menor de edad' else 'Mayor de edad' end mayor_mejor_de_edad
+from jugadores;
+
+-- Ejercicio 11
