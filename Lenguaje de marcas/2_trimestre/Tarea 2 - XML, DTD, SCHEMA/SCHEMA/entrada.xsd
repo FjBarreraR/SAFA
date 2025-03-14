@@ -1,0 +1,26 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="entradas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="entrada">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="datosEvento">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="fecha" type="xs:string"/>
+                                        <xs:element name="lugar" type="xs:string"/>
+                                        <xs:element name="ciudad" type="xs:string"/>
+                                        <xs:element name="precio" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="ticketEvento" type="xs:string"/>
+                        <xs:attribute name="codigo" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

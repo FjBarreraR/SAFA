@@ -1,0 +1,9 @@
+<!ELEMENT entradas (entrada)>
+<!ELEMENT entrada (datosEvento)>
+<!ATTLIST entrada ticketEvento CDATA #REQUIRED>
+<!ATTLIST entrada codigo CDATA #REQUIRED>
+<!ELEMENT datosEvento (fecha, lugar, ciudad, precio)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT lugar (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>

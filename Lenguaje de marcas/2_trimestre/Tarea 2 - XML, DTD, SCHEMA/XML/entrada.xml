@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?DOCTYPE entradas SYSTEM "entrada.dtd"?>
+<?xml-stylesheet href="entrada.xsd" type="text/xsl"?>
+<?xml-stylesheet href="orueba.xslt" type="text/xsl"?>
+<entradas>
+    <entrada ticketEvento="FSO-GIRA fenix" codigo="12114TG4314HJ13413">
+        <datosEvento>
+            <fecha>25/03/2022</fecha>
+            <lugar>Palacio de Congresos</lugar>
+            <ciudad>Sevilla</ciudad>
+            <precio>60.00 €</precio>
+        </datosEvento>
+    </entrada>
+</entradas>
