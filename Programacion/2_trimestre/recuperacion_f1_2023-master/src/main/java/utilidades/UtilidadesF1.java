@@ -40,19 +40,23 @@ public class UtilidadesF1 {
      * @return
      */
     public static Map<Escuderia, List<Piloto>>  pilotosPorEscuderia(List<Piloto> pilotos){
-        Map<Escuderia, List<Piloto>> pilotosPorEscuderiaSolucion = new HashMap<>();
+//        Map<Escuderia, List<Piloto>> pilotosPorEscuderiaSolucion = new HashMap<>();
+//
+//        for (Piloto p : pilotos){
+//            if (pilotosPorEscuderiaSolucion.containsKey(p.getEscuderia())){
+//                pilotosPorEscuderiaSolucion.get(p.getEscuderia()).add(p);
+//            }else{
+//                List<Piloto> pilotosEscuderia = new ArrayList<>();
+//                pilotosEscuderia.add(p);
+//                pilotosPorEscuderiaSolucion.put(p.getEscuderia(), pilotosEscuderia);
+//            }
+//        }
+//
+//        return pilotosPorEscuderiaSolucion;
 
-        for (Piloto p : pilotos){
-            if (pilotosPorEscuderiaSolucion.containsKey(p.getEscuderia())){
-                pilotosPorEscuderiaSolucion.get(p.getEscuderia()).add(p);
-            }else{
-                List<Piloto> pilotosEscuderia = new ArrayList<>();
-                pilotosEscuderia.add(p);
-                pilotosPorEscuderiaSolucion.put(p.getEscuderia(), pilotosEscuderia);
-            }
-        }
 
-        return pilotosPorEscuderiaSolucion;
+        // Con JAVA 8
+        return pilotos.stream().collect(Collectors.groupingBy(Piloto::getEscuderia));
     }
 
 
