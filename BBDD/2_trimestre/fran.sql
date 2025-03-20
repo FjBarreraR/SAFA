@@ -44,3 +44,5 @@ select nombre, Case when TRUNC(MONTHS_BETWEEN(SYSDATE, fecha_nacimiento)/12)<25 
 from jugadores;
 
 -- Ejercicio 11
+select nombre || ' ' || 
+from 
